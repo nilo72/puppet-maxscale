@@ -1,0 +1,13 @@
+fixtures:
+  repositories:
+    apt:
+      repo:              'git://github.com/puppetlabs/puppetlabs-apt'
+      branch:            '2.1.x'
+    concat:
+      repo:              'git://github.com/ripienaar/puppet-concat'
+      ref:               '1.1.2'
+    stdlib:
+      repo:              'git://github.com/puppetlabs/puppetlabs-stdlib'
+      ref:               '4.12.0'
+  symlinks:
+    maxscale:            '#{source_dir}'
