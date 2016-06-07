@@ -14,7 +14,7 @@ class maxscale::install inherits maxscale {
   
   
   package { 'maxscale':
-    ensure  => latest,
+    ensure  => present,
     require => Apt::Source['maxscale'],
   }
 }

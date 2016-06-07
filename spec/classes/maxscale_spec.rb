@@ -45,7 +45,7 @@ describe 'maxscale' do
 
       it 'installs packages' do
         should contain_package('maxscale')
-        should contain_package('maxscale').with_ensure('latest')
+        should contain_package('maxscale').with_ensure('present')
       end
     end
 
