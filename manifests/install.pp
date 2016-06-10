@@ -4,11 +4,11 @@ class maxscale::install inherits maxscale {
   
   apt::source { 'maxscale':
     location => $maxscale::apt_url,
-    release  => '/',
-    repos    => '',
+    release  => 'jessie',
+    repos    => 'main',
     key      => {
-      id     => 'BCECA90325B072AB1245F739AB7C32C35180350A',
-      source => 'https://download.owncloud.org/download/repositories/stable/Debian_8.0/Release.key',
+      id     => '199369E5404BD5FC7D2FE43BCBCB082A1BB943DB',
+      source => 'http://downloads.mariadb.com/enterprise/xagz-pk9v/mariadb-maxscale/MariaDB-MaxScale-GPG-KEY',
     },
   }
   
