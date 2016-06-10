@@ -8,7 +8,7 @@ class maxscale::install inherits maxscale {
     repos    => 'main',
     key      => {
       id     => '199369E5404BD5FC7D2FE43BCBCB082A1BB943DB',
-      source => 'http://downloads.mariadb.com/enterprise/xagz-pk9v/mariadb-maxscale/latest/debian/dists/jessie/Release.gpg',
+      source => 'http://downloads.mariadb.com/enterprise/xagz-pk9v/mariadb-maxscale/MariaDB-MaxScale-GPG-KEY',
     },
   }
   
