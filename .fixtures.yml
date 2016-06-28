@@ -9,5 +9,6 @@ fixtures:
     stdlib:
       repo:              'git://github.com/puppetlabs/puppetlabs-stdlib'
       ref:               '4.12.0'
+    inifile:             "git://github.com/puppetlabs/puppetlabs-inifile.git"
   symlinks:
     maxscale:            '#{source_dir}'

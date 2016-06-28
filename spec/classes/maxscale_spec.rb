@@ -7,12 +7,13 @@ describe 'maxscale' do
       :osfamily                   => 'Debian',
       :operatingsystem            => 'Debian',
       :lsbdistid                  => 'Debian',
+      :lsbdistcodename            => 'jessie',
       :operatingsystemrelease     => '8',
       :fqdn                       => 'testhost.example.org',
   }}
 
   let(:params) { {
-
+      :apt_url          => 'source.example.com',
   }}
 
   context 'with default settings' do
@@ -36,6 +37,20 @@ describe 'maxscale' do
       should contain_class('maxscale::service')
     end
 
+    it 'maxscale configfile settings' do
+      should contain_ini_setting('maxscale router').with_section('OwncloudService')
+      should contain_ini_setting('maxscale router').with_setting('router')
+      should contain_ini_setting('maxscale router').with_value('readconnroute')
+      should contain_ini_setting('maxscale service type').with_section('OwncloudService')
+      should contain_ini_setting('maxscale service type').with_setting('type')
+      should contain_ini_setting('maxscale service type').with_value('service')
+      should contain_ini_setting('maxscale servers').with_section('OwncloudService')
+      should contain_ini_setting('maxscale servers').with_setting('servers')
+      should contain_ini_setting('maxscale servers').with_value('server1,server2,server3')
+      should contain_ini_setting('maxscale threads').with_setting('threads')
+      should contain_ini_setting('maxscale threads').with_section('MaxScale')
+      should contain_ini_setting('maxscale threads').with_value('1')
+    end
 
     describe 'maxscale::install' do
 

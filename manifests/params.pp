@@ -3,6 +3,7 @@ class maxscale::params {
   $service_ensure = 'running'
   $service_enable = true
   $service_name = 'maxscale'
+  $service_dbs = ['server1','server2','server3']
   $apt_url = undef
 
   case $::osfamily {
