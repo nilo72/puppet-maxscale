@@ -40,7 +40,7 @@ class maxscale::config inherits maxscale{
     section_suffix => ']',
   }
 
-  ini_setting { 'maxscale server1' :
+  ini_setting { 'maxscale server1 address' :
     ensure         => present,
     path           => $maxscale::configfile,
     section        => 'server1',
@@ -50,7 +50,7 @@ class maxscale::config inherits maxscale{
     section_suffix => ']',
   }
 
-  ini_setting { 'maxscale server1' :
+  ini_setting { 'maxscale server1 type' :
     ensure         => present,
     path           => $maxscale::configfile,
     section        => 'server1',
@@ -60,7 +60,7 @@ class maxscale::config inherits maxscale{
     section_suffix => ']',
   }
 
-  ini_setting { 'maxscale server1' :
+  ini_setting { 'maxscale server1 port' :
     ensure         => present,
     path           => $maxscale::configfile,
     section        => 'server1',
@@ -70,7 +70,7 @@ class maxscale::config inherits maxscale{
     section_suffix => ']',
   }
 
-  ini_setting { 'maxscale server1' :
+  ini_setting { 'maxscale server1 serv_weight' :
     ensure         => present,
     path           => $maxscale::configfile,
     section        => 'server1',
@@ -80,7 +80,7 @@ class maxscale::config inherits maxscale{
     section_suffix => ']',
   }
 
-  ini_setting { 'maxscale server1' :
+  ini_setting { 'maxscale server1 protocol' :
     ensure         => present,
     path           => $maxscale::configfile,
     section        => 'server1',
