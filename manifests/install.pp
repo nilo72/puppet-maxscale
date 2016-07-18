@@ -1,7 +1,7 @@
 class maxscale::install inherits maxscale {
 
   include apt
-  
+
   apt::source { 'maxscale':
     location => $maxscale::apt_url,
     release  => $release,
